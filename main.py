@@ -4,9 +4,13 @@ from math import sqrt
 
 
 def isprime(p):
-
-    # votre code ici
-
+    from math import sqrt
+    for i in range(2,int(sqrt(val))+1):
+        if val%i == 0:
+            return False
+            break
+    else :
+        return True
     pass
 
 #### Fonction principale
