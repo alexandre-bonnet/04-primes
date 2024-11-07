@@ -1,33 +1,32 @@
+"""
+methode main composée de deux fonctions
+"""
 from math import sqrt
-
 #### Fonction secondaire
 
 
 def isprime(p):
-    from math import sqrt
-    for i in range(2,int(sqrt(val))+1):
-        if val%i == 0:
+    """
+    Retourne un boolean qui répond à la question:
+    est ce que p est premier
+    """
+    if p == 1:
+        return False
+    for i in range(2,int(sqrt(p))+1):
+        if p%i == 0:
             return False
-            break
-    else :
-        return True
-    pass
-
+    return True
 #### Fonction principale
 
 
 def main():
-
+    """
+    La fonction main fait appel à is prime pour tester son bon fonctionnement
+    """
     # vos appels à la fonction secondaire ici
-    val = eval(input("Entrez le nombre à vérifier"))
-    if(isprime(val)):
-        print("Ce nombre est premier")
-    else :
-        print("Ce nombre n'est pas premier")
-
-    isprime(1)
-    isprime(2)
-    isprime(4)
+    print(isprime(1))
+    print(isprime(2))
+    print(isprime(4))
 
     for n in range(100):
         if isprime(n):
