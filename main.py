@@ -19,6 +19,15 @@ def isprime(p):
 def main():
 
     # vos appels à la fonction secondaire ici
+    val = eval(input("Entrez le nombre à vérifier"))
+    if(isprime(val)):
+        print("Ce nombre est premier")
+    else :
+        print("Ce nombre n'est pas premier")
+
+    isprime(1)
+    isprime(2)
+    isprime(4)
 
     for n in range(100):
         if isprime(n):
